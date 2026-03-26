@@ -1,0 +1,103 @@
+.myBackground{
+    background-color: #42E3E1
+}
+
+.pictureBackground{
+     background-image: url("../Img/blackBG.jpg");
+     background-size: cover;
+     background-position: center;
+}
+
+.transparent{
+    background-color:  rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.03);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+    padding: 10px;
+}
+
+.transparent .sapMpanelBG,
+.transparent .sapMpanelHdr,
+.transparent .sapMpanelContent{
+    background-color: transparent;
+}
+
+.myCenteredPanel {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* .transparent .sapMInputBase {
+    background-color: transparent;
+    border: 1px solid white;                
+    box-shadow: none ;            
+    color: white;             
+} */
+
+/* .transparent .sapMInputBaseInner {
+    
+background: rgba(255, 255, 255, 0.1) !important;
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.3) !important;
+    color: white !important;
+    border-radius: 8px;
+
+} */
+
+.transparent .sapMInputBaseInner::placeholder {
+    color: rgba(71, 67, 67, 0.7) ;
+}
+
+/* .transparent .sapMBtn {
+    background-color: transparent ;
+    border: 1px solid white ;   
+    color: white ;
+    box-shadow: none ;
+} */
+
+/* .transparent .sapMBtn:hover {
+    background-color: rgba(255,255,255,0.2) ;
+} */
+
+
+.whiteText {
+    color: white !important;
+}
+
+
+/* Loader overlay */
+.loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255,255,255,0.8);
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* GIF (custom) */
+.loader::before {
+    content: "";
+    width: 60px;
+    height: 60px;
+    background: url("../Img/preview.gif") no-repeat center;
+    background-size: contain;
+}
+
+/* Hide loader */
+.hidden {
+    display: none;
+}
+
+/* .alignRight {
+    margin-left: auto;
+} */
+

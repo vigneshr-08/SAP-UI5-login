@@ -1,0 +1,27 @@
+<m:Page id="_IDGenPage" xmlns:m="sap.m" title="Northwind Shipper">
+    <m:Table id="ShipperTable" items="{/Shippers}">
+        <m:headerToolbar>
+            <m:Toolbar id="_IDGenToolbar">
+                <m:Title id="_IDGenTitle" text="Shipper List" />
+            </m:Toolbar>
+        </m:headerToolbar>
+
+        <m:columns>
+            <m:Column id="_IDGenColumn"><m:Text id="_IDGenText" text="Shipper ID" /></m:Column>
+            <m:Column id="_IDGenColumn1"><m:Text id="_IDGenText1" text="Company Name" /></m:Column>
+            <m:Column id="_IDGenColumn2"><m:Text id="_IDGenText2" text="Phone" /></m:Column>
+            <!-- <m:Column id="_IDGenColumn3"><m:Text id="_IDGenText3" text="Price" /></m:Column> -->
+        </m:columns>
+
+        <m:items>
+            <m:ColumnListItem id="_IDGenColumnListItem">
+                <m:cells>
+                    <m:Text id="_IDGenText4" text="{ShipperID}" />
+                    <m:Text id="_IDGenText5" text="{CompanyName}" />
+                    <m:Text id="_IDGenText6" text="{Phone}" />
+                    <!-- <m:ObjectNumber id="_IDGenObjectNumber" number="{UnitPrice}" unit="$" /> -->
+                </m:cells>
+            </m:ColumnListItem>
+        </m:items>
+    </m:Table>
+</m:Page>

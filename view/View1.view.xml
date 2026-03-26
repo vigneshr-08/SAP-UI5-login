@@ -1,0 +1,20 @@
+<mvc:View controllerName="project2.controller.View1"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m" >
+    <Page id="page" title="Login" showHeader="false" backgroundDesign="Solid" class="pictureBackground" >
+    <content>
+    <FlexBox id="_IDGenHBox" justifyContent="Center" alignContent="Center" height="100%" >
+    <Panel id="_IDGenPanel" headerText="Login" width="320px" class="myCenteredPanel transparent" 
+                            backgroundDesign="Transparent" >
+    <VBox id="_IDGenVBox" justifyContent="Center" alignContent="Center" backgroundDesign="Transparent" >
+    <Text id="_IDGenText7" text="Username" class="whiteText" ></Text>
+    <Input id="userid" placeholder="Username" width="250px" />
+    <Text id="_IDGenText8" text="Password" class="whiteText" ></Text>
+    <Input id="password" placeholder="Password" type="Password" width="250px" />
+    <Button id="_IDGenButton" text="Login" type="Emphasized" width="250px" press="onLogin" />
+    </VBox>
+    </Panel>
+    </FlexBox>
+    </content>
+    </Page>
+</mvc:View>

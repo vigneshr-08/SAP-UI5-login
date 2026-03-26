@@ -1,0 +1,76 @@
+<mvc:View xmlns:table="sap.fe.macros.table" controllerName="project2.controller.Firstpage"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m" 
+    xmlns:l="sap.ui.layout" >
+    <Page id="Page" title="Welcome to Firstpage" backgroundDesign="Solid" class="myBackground" >
+    <HBox id="_IDGenHBox1" class="sapUiTinyMarginBegin" >
+    <GenericTile id="_IDGenGenericTile" 
+                 class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout whiteText" 
+                 header="Getdata" subheader="Odata" press="onTilePress" >
+    <TileContent id="_IDGenTileContent" footer="Display">
+    <ImageContent id="_IDGenImageContent" src="sap-icon://display"></ImageContent>
+    </TileContent>
+    </GenericTile>
+
+    <GenericTile id="_IDGenGenericTile1" 
+                 class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout whiteText" 
+                 header="Close Data" subheader="Odata" press="close" >
+    <TileContent id="_IDGenTileContent1" footer="close"> 
+    <ImageContent id="_IDGenImageContent2" src="sap-icon://private"></ImageContent>
+    </TileContent>
+    </GenericTile>
+
+    <GenericTile id="_IDGenGenericTile2" 
+                 class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout whiteText" 
+                 header="Next Page" subheader="Second Page" press="Second" >
+    <TileContent id="_IDGenTileContent2" footer="Shipper"> 
+    <ImageContent id="_IDGenImageContent3" src="sap-icon://shipping-status"></ImageContent>
+    </TileContent>
+    </GenericTile>
+    
+    <Panel id="detailPanel" visible="true" headerText="Product Details" 
+            class="sapUiResponsiveMargin" height="auto"
+            width="250px" >
+        <VBox id="_IDGenVBox1" class="sapUiSmallMargin">
+            <Text id="ProductID" />
+            <Text id="ProductName" />
+            <Text id="Quantity" />
+            <Text id="UnitPrice" />
+        </VBox>
+    </Panel>
+    </HBox>
+
+    <!-- <VBox id="_IDGenVBox2" class="sapUiMediumMarginTop" > -->
+    <!-- <Image id="Custom" src="Img/preview.gif" visible="false" width="80px" 
+                            class="sapUiMediumMarginTop sapUiMediumMarginBottom" ></Image> -->
+    <FlexBox id="loader" class="loader hidden"></FlexBox>
+
+    <VBox id="tableArea" visible="false" class="sapUiMediumMarginTop" >
+    <Title id="tblTitle" level="H4" text="" ></Title>
+    <Table id="Tbl" inset="false" mode="SingleSelectMaster" growing="true" 
+           growingScrollToLoad="true" items = "{/Products}" itemPress="onRowPress" >
+
+    <columns>
+    <Column id="_IDGenColumn4" ><Text id="_CIDGenText1" text="ID"  /></Column>
+    <Column id="_IDGenColumn5" ><Text id="_CIDGenText2" text="Name" /></Column>
+    <Column id="_IDGenColumn6" ><Text id="_CIDGenText3" text="Quantity Per Unit" /></Column>
+    <Column id="_IDGenColumn7"  ><Text id="_CIDGenText4"  text="Price" /></Column>
+    </columns>
+
+    <items>
+    <ColumnListItem id="_IDGenColumnListItem1" type="Active" press="onRowPress" >
+    <cells>
+    <Text id="_IDGenText9" text="{ProductID}" />
+    <Text id="_IDGenText10" text="{ProductName}" />
+    <Text id="_IDGenText11" text="{QuantityPerUnit}" />
+    <ObjectNumber id="_IDGenObjectNumber1" number="{UnitPrice}" unit="$" />
+    </cells>
+    </ColumnListItem>
+    </items>
+    
+    </Table>    
+    </VBox>
+
+    <!-- </VBox> -->
+    </Page>
+</mvc:View>
